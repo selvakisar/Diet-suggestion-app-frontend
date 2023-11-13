@@ -6,11 +6,12 @@ function Signup() {
    
     
 
-    const [name,setName]=useState("")
-    const [email,setEmail]=useState("")
-    const [password,setPassword]=useState("")
-  const [error,setError]=useState("")
-  const[successMsg,setSuccessMsg]=useState("")
+    const [name,setName]=useState("");
+    const [email,setEmail]=useState("");
+    const [password,setPassword]=useState("");
+  const [error,setError]=useState("");
+  const[successMsg,setSuccessMsg]=useState("");
+  const navigate=useNavigate()
 
 
 //   const navigate=useNavigate("")
@@ -32,6 +33,7 @@ const SignupUser=async () =>{
         setError("")
       setSuccessMsg(data.message)
       localStorage.setItem("token",data.token)
+      navigate("/home")
    
     } 
   
@@ -86,7 +88,6 @@ const SignupUser=async () =>{
 function SignupForm ({name,setName,password,setPassword,email,setEmail,SignupUser,error,successMsg
 }) 
 {
-  const navigate=useNavigate()
     return ( 
 <div className="justify-center p-2 ">
 <div className="artboard artboard-horizontal phone-7  "> 
@@ -127,7 +128,7 @@ value={password}
 <button className="btn btn-active btn-ghost m-2" onClick={()=>SignupUser()} >Signup</button>
           
           <div className="text-m">
-          <h1>Already have an account?<a href="/" className="font-medium text-red-600 hover:text-accent-500" onClick={()=>navigate("/")}> Sign in</a></h1>
+          <h1>Already have an account?<a href="/" className="font-medium text-red-600 hover:text-accent-500" > Sign in</a></h1>
           </div>
 </div>
  </div>

@@ -6,7 +6,7 @@ function Reset() {
     const [password,setPassword]=useState("")
     const [error, setError] = useState("");
     const [successMsg, setSuccessMsg] = useState("");
-    
+    const navigate=useNavigate()
     
     const resetPassword = async  ()=>{
         const payload={password}
@@ -16,8 +16,9 @@ function Reset() {
                 setSuccessMsg("")
             }else{
                 setError("")
-                setSuccessMsg(data.message)
-                localStorage.setItem("token",data.token)
+                setSuccessMsg(data.message);
+                localStorage.setItem("token",data.token);
+                navigate("/");
             }
         })
     

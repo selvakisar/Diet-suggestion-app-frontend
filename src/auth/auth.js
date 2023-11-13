@@ -1,4 +1,3 @@
-import React from "react";
 
 import { APIauth } from "../Api/api";
 

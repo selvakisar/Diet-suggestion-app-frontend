@@ -7,7 +7,7 @@ export const Login = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [successMsg, setSuccessMsg] = useState("");
-
+  const navigate=useNavigate()
   const LoginUser = async () => {
     const payload = { email, password };
 
@@ -21,6 +21,7 @@ export const Login = () => {
         setSuccessMsg(data.message);
         console.log(data.message);
         localStorage.setItem("token", data.token);
+        navigate("/home");
       }
     });
   };
@@ -99,7 +100,7 @@ function LoginForm({ email, setEmail, password, setPassword, LoginUser }) {
           </div>
           <div>
             <label className=" justify-center p-6">
-              <div>
+              <div className="" >
                 <input
                   type="email"
                   placeholder="@mail.com "
