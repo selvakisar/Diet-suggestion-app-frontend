@@ -21,7 +21,7 @@ function App() {
     <Route path="/" element={<Login/>}></Route>
         <Route path="/signup" element={<Signup/>}></Route>
         <Route path="/forgetpass" element={<Forget/>}></Route>
-        <Route path="/resetpass/:token" element={<Reset/>}></Route>
+        <Route path="/resetpass" element={<Reset/>}></Route>
         <Route  path="/bmi" element= {<BmiCalculator/>} ></Route>
         <Route path="/home" element={<Home/>}></Route>
         <Route path="/bmi" element={<BmiCalculator/>}></Route>

@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { APIfood } from "../Api/api";
  
-export  async function getFoods(){
+export  async function getAllFoods(token){
     const res=await fetch (`${APIfood}/all`,{
         method: "GET",
-        body: JSON.stringify(),
         headers:{
-            "Content-Type": "application/json",
+            "x-auth-token":token
         }
      
     })
-    const foodData= await res.json()
-    return foodData
+    const data  = await res.json()
+    return data;
 }
 
 
