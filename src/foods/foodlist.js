@@ -1,29 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { APIfood } from "../Api/api";
+
  
-export  async function getAllFoods(token){
-    const res=await fetch (`${APIfood}/all`,{
-        method: "GET",
-        headers:{
-            "x-auth-token":token
-        }
-     
-    })
-    const data  = await res.json()
-    return data;
-}
-
-
-export  async function delFoods(){
-    const res=await fetch (`${APIfood}/del/:_id`,{
-        method: "DELETE",
-      
-     
-    })
-    const foodData= await res.json()
-    return foodData
-}
-
 
 
 
