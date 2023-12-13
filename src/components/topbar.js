@@ -24,9 +24,9 @@ export default function Topbar(){
     <button  className="btn btn-black normal-case text-xl text-center "
      onClick={()=>navigate("/bmi")}>BMI</button>
 
-    <button  className="btn btn-black normal-case text-xl text-center "
+    {/* <button  className="btn btn-black normal-case text-xl text-center "
     
-    onClick={()=>navigate("/plan-view")}>PLAN</button>
+    onClick={()=>navigate("/plan-view")}>PLAN</button> */}
 
 <button  className="btn btn-black normal-case text-xl text-center "
     

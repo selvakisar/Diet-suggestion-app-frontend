@@ -1,13 +1,13 @@
-// export const APIplan="https://zonezero.onrender.com/api/plan"
-export const APIplan="http://localhost:8090/api/plan"
+export const APIplan="https://zonezero.onrender.com/api/plan"
+// export const APIplan="http://localhost:8090/api/plan"
 
 export async function addToPlan(foodId) {
-    console.log(foodId)
+    console.log('foodId api', foodId)
     try {
 
         const response = await fetch(`${APIplan}/add/${foodId}`, {
             method: "POST",
-            body: JSON.stringify(),
+            body: JSON.stringify({user:{_id: localStorage.getItem('userId')}}),
             headers: {
                 "x-auth-token": localStorage.getItem("token"),
                 "Content-Type": "application/json",
@@ -47,7 +47,7 @@ export async function myPlan() {
             };
         }
 
-        const response = await fetch(`${APIplan}/user/my-plan`, {
+        const response = await fetch(`${APIplan}/user/my-plan/${localStorage.getItem('userId')}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -59,7 +59,7 @@ export async function myPlan() {
         if (response.ok) {
             return {
                 success: true,
-                cart: data,
+                data,
             };
         } else {
             return {

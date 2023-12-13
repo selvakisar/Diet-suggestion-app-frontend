@@ -12,7 +12,7 @@ export default function Comp3(){
     <h2 className="card-title">Plan!</h2>
     <p>Make your Plan</p>
     <div className="card-actions">
-      <button  onClick= {()=>navigate("/plan-view")} className="btn btn-primary">view Plan</button>
+      <button  onClick= {()=>navigate("/user/my-plan")} className="btn btn-primary">view Plan</button>
     </div>
   </div>
 </div>

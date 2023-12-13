@@ -21,6 +21,7 @@ export const Login = () => {
         setSuccessMsg(data.message);
         console.log(data.message);
         localStorage.setItem("token", data.token);
+        localStorage.setItem("userId", data.userId);
         navigate("/home");
       }
     });
@@ -156,5 +157,4 @@ function LoginForm({ email, setEmail, password, setPassword, LoginUser }) {
     </div>
   );
 }
-export default Login;
-
+export default Login;
