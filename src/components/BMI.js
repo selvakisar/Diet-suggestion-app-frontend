@@ -1,12 +1,7 @@
 import { useEffect, useState } from "react";
 
-import { Chart, LineController, LineElement, PointElement, LinearScale, Title,CategoryScale } from 'chart.js';
 import { bmiBaseUrl } from "../Api/api";
 
-
-Chart.register(LineController, LineElement, PointElement, LinearScale, Title, CategoryScale);
-
-Chart.register(CategoryScale);
 
 
 
@@ -69,7 +64,7 @@ export  function BmiCalculator() {
                             </tr>
                         </thead>
                         <tbody>
-                            {bmiInfo.length > 0 && bmiInfo.map((bmi, i)=> {
+                            {bmiInfo.map((bmi, i)=> {
                                 return(
                                     <tr key={i}>
                                     <td>{bmi.date}</td>

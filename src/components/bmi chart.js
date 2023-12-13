@@ -4,11 +4,12 @@ import React, {  useEffect, useState } from 'react';
 import { Line } from 'react-chartjs-2';
 import { Chart, LineController, LineElement, PointElement, LinearScale, Title,CategoryScale } from 'chart.js';
 import { bmiBaseUrl } from '../Api/api';
-
 Chart.register(LineController, LineElement, PointElement, LinearScale, Title, CategoryScale);
-
 Chart.register(CategoryScale);
-const BMIChart = () => {
+
+
+export default function BMIChart(){
+
   const [height, setHeight] = useState('');
   const [weight, setWeight] = useState('');
   const [bmiData, setBmiData] = useState([]);
@@ -139,4 +140,3 @@ const BMIChart = () => {
   );
 };
 
-export default BMIChart;
