@@ -4,6 +4,7 @@ import Topbar from './topbar';
 import Comp1 from './comp1';
 import Comp2 from './comp2';
 import Comp3 from './comp3';
+// eslint-disable-next-line no-unused-vars
 import Footer from '../foods/planchart';
 
 
