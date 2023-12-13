@@ -59,8 +59,8 @@ export  function BmiCalculator() {
 <div>
   
   
-          <div className="card lg:card-side  shadow-xl">
-          <table className="table table-hover table-bordered text-white">
+          <div className=" overflow-x-auto card lg:card-side  shadow-xl">
+          <table className="table table-zebra ">
                         <thead>
                             <tr>
                                 <th>Date</th>

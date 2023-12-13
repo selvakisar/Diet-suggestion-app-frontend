@@ -149,6 +149,11 @@ function LoginForm({ email, setEmail, password, setPassword, LoginUser }) {
                 >
               Sign up
                 </a></h1>
+
+                <p>email:selvaselva@gmail.com 
+                                                          
+                  password:123456789
+                </p>
               </div>
             </div>
           </div>
@@ -157,4 +162,4 @@ function LoginForm({ email, setEmail, password, setPassword, LoginUser }) {
     </div>
   );
 }
-export default Login;
+export default Login;

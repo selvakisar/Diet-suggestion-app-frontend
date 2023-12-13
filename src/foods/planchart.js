@@ -16,7 +16,7 @@ export default function Footer(params) {
     </div>
   </nav> 
   <aside>
-    <p>Copyright © 2023 - All right reserved by ACME Industries Ltd</p>
+    <p>Copyright © 2023 - All right reserved by ZoneZero.inc</p>
   </aside>
 </footer>
   )
