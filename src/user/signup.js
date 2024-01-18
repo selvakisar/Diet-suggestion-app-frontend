@@ -33,7 +33,7 @@ const SignupUser=async () =>{
         setError("")
       setSuccessMsg(data.message)
       localStorage.setItem("token",data.token)
-      navigate("/home")
+      navigate("/suc")
    
     } 
   

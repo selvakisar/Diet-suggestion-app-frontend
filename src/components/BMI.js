@@ -74,7 +74,9 @@ export  function BmiCalculator() {
                                 )
                             })}
                         </tbody>
-                    </table>
+                    </table> :<div>
+                      no dT
+                    </div>
           </div>
                 </div>
     </div>

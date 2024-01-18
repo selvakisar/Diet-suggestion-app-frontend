@@ -13,6 +13,7 @@ import { MyPlan } from './plan/viewplan';
 import { AddToPlan } from './plan/Add to plan';
 // eslint-disable-next-line no-unused-vars
 import Bmidata from './components/Bmidata';
+import Succes from './user/succes';
 
 function App() {
  
@@ -24,6 +25,7 @@ function App() {
       
     <Route path="/" element={<Login/>}></Route>
         <Route path="/signup" element={<Signup/>}></Route>
+        <Route path="/suc" element={<Succes/>}></Route>
         <Route path="/forgetpass" element={<Forget/>}></Route>
         <Route path="/resetpass" element={<Reset/>}></Route>
         {/* <Route  path="/bmi" element= {<BmiCalculator/>} ></Route> */}
